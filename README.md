@@ -1,12 +1,12 @@
 TextAnalyticsUsingNltk
 ======================
 
-# Initial Idea
+## Initial Idea
   
   A simple flask based web based project that will help you upload a dataset onto mongo and perform 
   some basic text analytics on that dataset.
 
-# Tools Used
+## Tools Used
   
 -  Flask
 -  Mongo
@@ -15,7 +15,7 @@ TextAnalyticsUsingNltk
 -  CSS
 -  JS
   
-# Basic Text Analytics
+## Basic Text Analytics
 
 - Tokenize
 - POS Tag
@@ -25,6 +25,6 @@ TextAnalyticsUsingNltk
 - Entity Extraction
 - Relationship between entities
 
-  
-  
-  
+## Installation
+
+    pip install -r requirments.txt
