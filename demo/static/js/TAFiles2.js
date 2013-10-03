@@ -11,14 +11,10 @@ $(function(){
 
 	$("#btn-tokenize").click(function(){
 
-		buttonReference = $(this);
-		buttonReference.button('loading');
 
 		function loadTokenizedData(text){
 			$("#tokenized-text-area").html("")
 			$("#tokenized-text-area").html(text);
-
-			buttonReference.button('reset');
 		}
 
 		function failedTokenizedData(xhr){
@@ -37,14 +33,9 @@ $(function(){
 
 	$("#btn-pos").click(function(){
 
-		buttonReference = $(this);
-		buttonReference.button('loading');
-
 		function loadPosTags(tags){
 			$("#POS-text-area").html("");
 			$("#POS-text-area").html(tags);
-
-			buttonReference.button('reset');
 		}
 
 			function failedPosTags(xhr){
@@ -62,14 +53,9 @@ $(function(){
 
 	$("#btn-chunk").click(function(){
 
-		buttonReference = $(this);
-		buttonReference.button('loading');
-
-
 		function loadChunkedData(chunks){
 			$("#chunked-text-area").html("");
 			$("#chunked-text-area").html(chunks);
-			buttonReference.button('reset');
 		}
 
 		function failedChunking(xhr){
@@ -88,14 +74,9 @@ $(function(){
 
 	$("#btn-entity").click(function(){
 
-		buttonReference = $(this);
-		buttonReference.button('loading');
-
 		function loadEntities(entities){
 			$("#entity-text-area").html("");
 			$("#entity-text-area").html(entities);
-			buttonReference.button('reset');
-
 		}
 
 		function failedEntities(xhr){
@@ -109,37 +90,6 @@ $(function(){
 			failure:failedEntities
 
 		});
-
-	});
-
-	$("#btn-tf").click(function(){
-
-		buttonReference = $(this);
-		buttonReference.button('loading');
-
-		function loadTF(TF){
-			$("#frequency-value").html("");
-			buttonReference.button('reset');
-			$.each(TF,function(key,value){
-				$("#table-tf").append("<tr class=\"frequency-value\"><td>"+value[0]+"</td><td>"+value[1]+"</td></tr>");
-			});
-
-		}
-
-		function failedTF(xhr){
-			console.log(xhr);
-		}
-
-		$.ajax({
-			type:"POST",
-			url:"/tfidf",
-			data:{"text":app.currentDocument},
-			dataType:"json",
-			success:loadTF,
-			failure:failedTF
-
-		});
-
 
 	});
 

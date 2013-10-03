@@ -6,26 +6,26 @@
     <link href="static/css/style.css" rel="stylesheet" media="screen">
   <script src="static/js/jquery.js"></script>
   <script src="static/js/bootstrap.min.js"></script>
-  <script src="static/js/TAFiles.js"></script>
+  <script src="static/js/TAFiles2.js"></script>
 
   </head>
   <body>
+    <br/>
+    <br/>
     <div class="container">
-    <h1>In God We Trust. All others must bring Data</h1>
       <div class="btn-group">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-          Documents
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          Dropdown
           <span class="caret"></span>
         </button>
         <ul id="dropdown-area" class="dropdown-menu">
         </ul>
       </div>
       <div class="btn-group">
-        <button data-loading-text="Tokenizing..." type="button" class="btn btn-default" id="btn-tokenize">Tokenize</button>
-        <button data-loading-text="Tagging..." type="button" class="btn btn-default" id="btn-pos">POS Tag</button>
-        <button data-loading-text="Chunking..." type="button" class="btn btn-default" id="btn-chunk">Chunk</button>
-        <button data-loading-text="Extracting..." type="button" class="btn btn-default" id="btn-entity">Extract Entities</button>
-        <button data-loading-text="Identifying..." type="button" class="btn btn-default" id="btn-tf">Text Frequency</button>
+        <button type="button" class="btn btn-default" id="btn-tokenize">Tokenize</button>
+        <button type="button" class="btn btn-default" id="btn-pos">POS Tag</button>
+        <button type="button" class="btn btn-default" id="btn-chunk">Chunk</button>
+        <button type="button" class="btn btn-default" id="btn-entity">Extract Entities</button>
       </div>
       <br/>
       <br/>
@@ -54,17 +54,6 @@
         <div id="entity-text-area" class="output-area">
         </div>
       </div>
-    <div class="well">
-    	<strong>Text Frequency</strong>
-    	<div id="frequency-text-area" class="output-area">
-    		<table class="table table-striped" id="table-tf">
-    		<tr>
-    			<th>Entity</th>
-    			<th>Frequency Score</th>
-    		</tr>
-    		</table>
-    	</div>
-    </div>
     </div>
   </body>
 </html>
